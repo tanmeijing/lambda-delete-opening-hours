@@ -1,0 +1,21 @@
+# name: deploy-py-lambda
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@master
+#     - name: Deploy code to Lambda
+#       uses: tanmeijing/py-lambda-action@1.0.2
+#       with:
+#         lambda_layer_arn: 'arn:aws:lambda:us-east-1:762383799344:layer:python-dep-login'
+#         lambda_function_name: 'login'
+#       env:
+#         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         AWS_DEFAULT_REGION: 'us-east-1'
