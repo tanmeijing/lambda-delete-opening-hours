@@ -35,6 +35,7 @@ jobs:
           echo "Zipping code..."
           cd code
           zip -r code.zip .
+          mv code.zip ../
           cd ..
 
       # Provides AWS credentials to Terraform
