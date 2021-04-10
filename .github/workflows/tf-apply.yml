@@ -33,7 +33,9 @@ jobs:
           echo "Installing dependencies..."
           pip install --target=code -r ./code/requirements.txt
           echo "Zipping code..."
-          zip -r code.zip ./code/*
+          cd code
+          zip -r code.zip .
+          cd ..
 
       # Provides AWS credentials to Terraform
       # By default, Terraform checks the home directory for a .aws folder with a credential file
